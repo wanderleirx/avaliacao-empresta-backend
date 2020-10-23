@@ -19,7 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::namespace('App\\Http\\Controllers')->group(function (){
-    Route::get('/instituicoes', 'InstituicoesController@find');
-    Route::get('/convenios', 'ConveniosController@find');
+    Route::get('/instituicoes', 'InstituicoesController@findAll');
+    Route::get('/convenios', 'ConveniosController@findAll');
+    Route::post('/simulacao', 'SimulacaoController@simulacao');
 });
 

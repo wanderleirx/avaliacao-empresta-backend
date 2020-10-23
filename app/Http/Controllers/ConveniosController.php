@@ -7,7 +7,7 @@ use Illuminate\Http\Response;
 
 class ConveniosController extends Controller
 {
-    public function find(Request $request, Response $response)
+    public function findAll(Request $request, Response $response)
     {
         try {
             $convenios = json_decode(file_get_contents(storage_path('app/public/Models/convenios.json')), true);

@@ -13,7 +13,7 @@ class InstituicoesController extends Controller
      * @param Response $response
      * @return \Illuminate\Http\JsonResponse
      */
-    public function find(Request $request, Response $response)
+    public function findAll(Request $request, Response $response)
     {
         try {
             $instituicoes = json_decode(file_get_contents(storage_path('app/public/Models/instituicoes.json')), true);
