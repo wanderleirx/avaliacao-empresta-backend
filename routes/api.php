@@ -20,5 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::namespace('App\\Http\\Controllers')->group(function (){
     Route::get('/instituicoes', 'InstituicoesController@find');
+    Route::get('/convenios', 'ConveniosController@find');
 });
 
