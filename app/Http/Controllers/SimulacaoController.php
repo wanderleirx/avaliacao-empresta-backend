@@ -64,6 +64,7 @@ class SimulacaoController extends Controller
                 || empty($simulacoes[$instituicao])) {
                 unset($simulacoes[$instituicao]);
             }
+            $value = array_values($value);
         }
 
         return $simulacoes;
